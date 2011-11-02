@@ -1,4 +1,5 @@
 <?php
+// this should test svn?
 // creates or resumes the session cookies
 session_start();
 // connnects to the mysql database!
