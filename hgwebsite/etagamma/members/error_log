@@ -1,0 +1,20 @@
+[24-Aug-2011 23:48:25] PHP Parse error:  syntax error, unexpected $end in /home/bensperr/public_html/etagamma/members/lookup.php on line 74
+[24-Aug-2011 23:48:51] PHP Parse error:  syntax error, unexpected $end in /home/bensperr/public_html/etagamma/members/lookup.php on line 43
+[24-Aug-2011 23:48:52] PHP Parse error:  syntax error, unexpected $end in /home/bensperr/public_html/etagamma/members/lookup.php on line 43
+[24-Aug-2011 23:50:04] PHP Parse error:  syntax error, unexpected $end in /home/bensperr/public_html/etagamma/members/lookup.php on line 74
+[24-Aug-2011 23:53:01] PHP Warning:  include(members/lookup.php?id=14) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/bensperr/public_html/etagamma/index.php on line 262
+[24-Aug-2011 23:53:01] PHP Warning:  include(members/lookup.php?id=14) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/bensperr/public_html/etagamma/index.php on line 262
+[24-Aug-2011 23:53:01] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'members/lookup.php?id=14' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/bensperr/public_html/etagamma/index.php on line 262
+[24-Aug-2011 23:53:02] PHP Warning:  include(members/lookup.php?id=14) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/bensperr/public_html/etagamma/index.php on line 262
+[24-Aug-2011 23:53:02] PHP Warning:  include(members/lookup.php?id=14) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/bensperr/public_html/etagamma/index.php on line 262
+[24-Aug-2011 23:53:02] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening 'members/lookup.php?id=14' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/bensperr/public_html/etagamma/index.php on line 262
+[25-Aug-2011 00:02:00] PHP Parse error:  syntax error, unexpected '}' in /home/bensperr/public_html/etagamma/members/lookupcode.php on line 11
+[25-Aug-2011 00:02:02] PHP Parse error:  syntax error, unexpected '}' in /home/bensperr/public_html/etagamma/members/lookupcode.php on line 11
+[25-Aug-2011 00:05:09] PHP Parse error:  syntax error, unexpected '[' in /home/bensperr/public_html/etagamma/members/lookupcode.php on line 13
+[25-Aug-2011 00:05:11] PHP Parse error:  syntax error, unexpected '[' in /home/bensperr/public_html/etagamma/members/lookupcode.php on line 13
+[25-Aug-2011 00:05:59] PHP Parse error:  syntax error, unexpected '[' in /home/bensperr/public_html/etagamma/members/lookupcode.php on line 13
+[25-Aug-2011 00:06:11] PHP Parse error:  syntax error, unexpected '[' in /home/bensperr/public_html/etagamma/members/lookupcode.php on line 14
+[25-Aug-2011 00:06:12] PHP Parse error:  syntax error, unexpected '[' in /home/bensperr/public_html/etagamma/members/lookupcode.php on line 14
+[05-Oct-2011 01:46:08] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/bensperr/public_html/etagamma/index.php on line 7
+[24-Oct-2011 10:34:01] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (11) in /home/bensperr/public_html/etagamma/index.php on line 7
+[24-Oct-2011 10:34:19] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (11) in /home/bensperr/public_html/etagamma/index.php on line 7
