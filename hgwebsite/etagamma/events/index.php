@@ -1,5 +1,4 @@
 <!-- This is a test of the submission system. -->
-<!-- This is not a test of any kind... -->
 
 <?php
 $page = "events/events.php";
