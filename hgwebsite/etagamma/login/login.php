@@ -26,7 +26,7 @@ END;
 		}
 		die();
 	} else {
-		echo 'fuck you ben!';
+		echo 'two users have the same name/password.';
 	}
 	
 } else {
