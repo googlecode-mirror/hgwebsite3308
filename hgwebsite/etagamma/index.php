@@ -1,4 +1,3 @@
-blah
 <?php
 // this should test svn?
 // creates or resumes the session cookies
