@@ -210,6 +210,7 @@ END;
 					<li><a href="/login/changeinfo">Change My Info</a></li>
 					<li><a href="/login/officers">Officers</a></li>
 					<li><a href="/login/eventchange">Add Event</a></li>
+					<li><a href="/login/addpledge">Add Pledge</a></li>
 					<li><a href="/login/logout.php">Logout</a></li>
 					</ul> 
 				</li>
