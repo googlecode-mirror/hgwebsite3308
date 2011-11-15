@@ -34,7 +34,8 @@ if(isset($_SESSION['user'])){
 		$roll		 =$_SESSION['user'];
 		$query = "UPDATE contacts SET alumn_year=$alumyear,b_day=$bday,b_month='$bmonth',b_year=$byear,cell=$cell,home=$home,work='$work',job='$job'";
 		$query = $query.",employer='$employer',email='$email',major='$major',minor='$minor',address='$street',city='$city'";
-		$query = $query.",zip='$zip',state='$state',country='$country',alumn_sem='$alumsemester' WHERE roll=$roll";
+		$query = $query.",zip='$zip',state='$state',country='$country',alumn_sem='$alumsemester'";
+		$query = $query.",firstname='$firstname',middlename='$middlename',lastname='$lastname' WHERE roll=$roll";
 
 		if($_POST['pass1']!=''){
 			if($_POST['pass1']!=$_POST['pass2']||strlen($_POST['pass1'])>30){
@@ -57,7 +58,9 @@ echo <<<END
 <table>
 <tr>
 	<th>Name</th>
-	<td></td>
+	<td><input type="text" firstname  = "firstname"  size = "30">
+		<input type="text" middlename = "middlename" size = "30">
+		<input type="text" lastname   = "lastname"   size = "30"></td>
 </tr>
 <tr>
 	<th>Password</th>
