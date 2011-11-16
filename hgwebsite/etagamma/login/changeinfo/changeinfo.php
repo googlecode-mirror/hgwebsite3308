@@ -143,6 +143,8 @@ echo <<<END
 	<th>Home Phone</th>
 	<td><input type="text" name = "home" size = "30" value="$home"></td>
 </tr>
+
+</table></td><td><table>
 <tr>
 	<th>Email</th>
 	<td><input type="text" name = "email" size = "30" value="$email"></td>
