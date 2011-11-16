@@ -24,13 +24,14 @@ if(!isset($_SESSION['user'])){
 		$zip		 =mysql_real_escape_string($_POST['zip']);
 		$state		 =mysql_real_escape_string($_POST['state']);
 		$country	 =mysql_real_escape_string($_POST['country']);
-		$roll		 =$_SESSION['user'];
+		$roll		 =-10;
 
-		$query = "INSERT INTO contacts (alumn_year, alumn_semester, b_day, b_month, b_year, cell, address,";
-		$query = $query." city, state, zip, country, email, major, minor, firstname, middlename, lastname, roll)";
-		$query = $query." VALUES ($alumn_year, '$alumn_semester', $bday, '$bmonth', $byear, $cell,";
-		$query = $query." '$address', '$city', '$state', '$zip', '$country', '$email', '$major', '$minor',";
-		$query = $query." '$firstname', '$middlename', '$lastname', $roll)";
+		$query = "INSERT INTO contacts (alumn_year, alumn_sem, b_day, b_month, b_year, cell, address,";
+		$query = $query." city, state, zip, country, email, major, minor, first, middle, last, roll, status)";
+		$query = $query." VALUES ($alumyear, '$alumsemester', $bday, '$bmonth', $byear, $cell,";
+		$query = $query." '$street', '$city', '$state', '$zip', '$country', '$email', '$major', '$minor',";
+		$query = $query." '$firstname', '$middlename', '$lastname', $roll, 'pledge')";
+		echo "$query";
 		
 		if($_POST['pass1']!=''){
 			if($_POST['pass1']!=$_POST['pass2']||strlen($_POST['pass1'])>30){
@@ -55,15 +56,15 @@ if(!isset($_SESSION['user'])){
 <table>
 <tr>
 	<th>First Name</th>
-	<td><input type="text" firstname  = "firstname"  size = "30"></td>
+	<td><input type="text" name = "firstname"  size = "30"></td>
 </tr>
 <tr>
 	<th>Middle Name</th>
-	<td><input type="text" middlename = "middlename" size = "30"></td>
+	<td><input type="text" name = "middlename" size = "30"></td>
 </tr>
 <tr>
 	<th>Last Name</th>
-	<td><input type="text" lastname   = "lastname"   size = "30"></td>
+	<td><input type="text" name   = "lastname"   size = "30"></td>
 </tr>
 <tr>
 	<th>Password</th>
