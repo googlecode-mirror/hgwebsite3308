@@ -1,18 +1,11 @@
 <?php
-if(isset($_SESSION['user'])){
-	echo "You're already logged in!";
+if(!isset($_SESSION['user'])){
+	echo "You're not logged in!";
 	die();
 } else {
 	connect();
 	if(isset($_POST['sub'])){
 
-
-		$doc=$_FILES['datafile']['tmp_name'];
-		if(move_uploaded_file($doc,'/heyo.txt')){
-			echo "file uploaded";
-		} else {
-			echo "file failed";
-		}
 		$firstname	 =mysql_real_escape_string($_POST['firstname']);
 		$middlename	 =mysql_real_escape_string($_POST['middlename']);
 		$lastname	 =mysql_real_escape_string($_POST['lastname']);
@@ -32,11 +25,13 @@ if(isset($_SESSION['user'])){
 		$state		 =mysql_real_escape_string($_POST['state']);
 		$country	 =mysql_real_escape_string($_POST['country']);
 		$roll		 =$_SESSION['user'];
-		$query = "UPDATE contacts SET alumn_year=$alumyear,b_day=$bday,b_month='$bmonth',b_year=$byear,cell=$cell,home=$home,work='$work',job='$job'";
-		$query = $query.",employer='$employer',email='$email',major='$major',minor='$minor',address='$street',city='$city'";
-		$query = $query.",zip='$zip',state='$state',country='$country',alumn_sem='$alumsemester'";
-		$query = $query.",firstname='$firstname',middlename='$middlename',lastname='$lastname' WHERE roll=$roll";
 
+		$query = "INSERT INTO contacts (alumn_year, alumn_semester, b_day, b_month, b_year, cell, address,";
+		$query = $query." city, state, zip, country, email, major, minor, firstname, middlename, lastname, roll)";
+		$query = $query." VALUES ($alumn_year, '$alumn_semester', $bday, '$bmonth', $byear, $cell,";
+		$query = $query." '$address', '$city', '$state', '$zip', '$country', '$email', '$major', '$minor',";
+		$query = $query." '$firstname', '$middlename', '$lastname', $roll)";
+		
 		if($_POST['pass1']!=''){
 			if($_POST['pass1']!=$_POST['pass2']||strlen($_POST['pass1'])>30){
 				echo "Passwords do not match!<br>";
@@ -53,14 +48,22 @@ if(isset($_SESSION['user'])){
 		echo "<br><br>";
 	}
 }
-echo <<<END
+?>
 <form method = "POST" action="">
+<table border="0">
+<tr><td>
 <table>
 <tr>
-	<th>Name</th>
-	<td><input type="text" firstname  = "firstname"  size = "30">
-		<input type="text" middlename = "middlename" size = "30">
-		<input type="text" lastname   = "lastname"   size = "30"></td>
+	<th>First Name</th>
+	<td><input type="text" firstname  = "firstname"  size = "30"></td>
+</tr>
+<tr>
+	<th>Middle Name</th>
+	<td><input type="text" middlename = "middlename" size = "30"></td>
+</tr>
+<tr>
+	<th>Last Name</th>
+	<td><input type="text" lastname   = "lastname"   size = "30"></td>
 </tr>
 <tr>
 	<th>Password</th>
@@ -70,7 +73,10 @@ echo <<<END
 	<th>Confirm Password</th>
 	<td><input type="password" name = "pass2" size = "30"></td>
 </tr>
-
+<tr>
+	<th>Pledge Class</th>
+	<td><input type="text" name = "pledgeclass" size = "30"></td>
+</tr>
 <tr>
 	<th>Alumn Year</th>
 	<td><input type="text" name = "alumyear" size = "30"></td>
@@ -99,6 +105,7 @@ echo <<<END
 	<td><input type="text" name = "byear" size = "30"></td>
 </tr>
 
+</table></td><td><table>
 <tr>
 	<th>Cell Phone #</th>
 	<td><input type="text" name = "cell" size = "30"></td>
@@ -146,12 +153,10 @@ echo <<<END
 </td></tr>
 
 <tr>
-	<td><input type = "submit" value = "Change" name = "sub"></td>
+	<td></td>
 </tr>
-
-
 </table>
+</td></tr>
+</table>
+<center><input type = "submit" value = "Submit" name = "sub"></center>
 </form>
-
-END;
-?>
