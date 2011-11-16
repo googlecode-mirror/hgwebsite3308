@@ -26,12 +26,11 @@ if(!isset($_SESSION['user'])){
 		$country	 =mysql_real_escape_string($_POST['country']);
 		$roll		 =-10;
 
-		$query = "INSERT INTO contacts (alumn_year, alumn_sem, b_day, b_month, b_year, cell, address,";
+		$query = "INSERT INTO contacts (grad_year, grad_sem,alumn_year, alumn_sem, b_day, b_month, b_year, cell, pledge_class, address,";
 		$query = $query." city, state, zip, country, email, major, minor, first, middle, last, roll, status)";
-		$query = $query." VALUES ($alumyear, '$alumsemester', $bday, '$bmonth', $byear, $cell,";
+		$query = $query." VALUES ($alumyear, '$alumsemester',$alumyear, '$alumsemester', $bday, '$bmonth', $byear, $cell, '$pledgeclass',";
 		$query = $query." '$street', '$city', '$state', '$zip', '$country', '$email', '$major', '$minor',";
 		$query = $query." '$firstname', '$middlename', '$lastname', $roll, 'pledge')";
-		echo "$query";
 		
 		if($_POST['pass1']!=''){
 			if($_POST['pass1']!=$_POST['pass2']||strlen($_POST['pass1'])>30){
@@ -40,7 +39,7 @@ if(!isset($_SESSION['user'])){
 			} else {
 				$hash = hash('sha256', $_POST['pass1']);
 				mysql_query("UPDATE contacts SET password='$hash' WHERE roll=$roll");
-				echo "Password changed!<br>";
+				echo "Password Added!<br>";
 
 			}
 		}
